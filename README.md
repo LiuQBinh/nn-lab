@@ -1,1 +1,2 @@
-Ahihi
+# Resources
+https://github.com/chaitjo/Perceptron

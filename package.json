@@ -1,0 +1,8 @@
+{
+  "name": "nn-lab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LiuQBinh/nn-lab.git",
+  "author": "LiuQBinh <luuquocbinh97@gmail.com>",
+  "license": "MIT"
+}

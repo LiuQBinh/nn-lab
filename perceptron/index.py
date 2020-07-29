@@ -1,5 +1,6 @@
 import sys
 import os
+import matplotlib.pyplot as plt
 
 train = True
 test = False
@@ -32,6 +33,12 @@ except IOError:
 inputLine = data.readline()
 while inputLine:
 	inputLine = inputLine[:-1].split()
+
+	if(inputLine[2] is '0'):
+		plt.scatter(inputLine[0], inputLine[1], color='blue')
+	else:
+		plt.scatter(inputLine[0], inputLine[1], color='red')
+
 	if test: inputNodes = inputLine
 	else:
 		inputNodes = inputLine[:-1]
@@ -68,3 +75,12 @@ if train:
 			weights.write(str(weight[i])+'\n')
 
 data.close()
+x_list = [0, 1, 2, 3]
+y_list = []
+for i in x_list:
+	y = (bias_factor - weight[0] * i) / weight[1]
+	y_list.append(y)
+
+print(x_list, y_list)
+plt.plot(x_list, y_list)
+plt.show()
